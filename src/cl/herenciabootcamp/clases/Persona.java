@@ -9,6 +9,7 @@ public class Persona {
     protected String nombre;
     protected int edad;
 
+
     public Persona() {
     }
 
@@ -25,6 +26,11 @@ public class Persona {
         this.edad = edad;
     }
 
+    /**
+     *
+     * @param nombre
+     * @param edad
+     */
     public Persona(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
