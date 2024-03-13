@@ -1,4 +1,5 @@
 import cl.herenciabootcamp.veterinaria.clases.Animal;
+import cl.herenciabootcamp.veterinaria.clases.Gato;
 import cl.herenciabootcamp.veterinaria.clases.Perro;
 
 public class VeterinariaMain {
@@ -15,6 +16,11 @@ public class VeterinariaMain {
 
         Perro castingPerro = (Perro)perro;
         castingPerro.mostrarDatosDelPerro();
+
+        Animal gato = new Gato("Garfield",10,"Montés");
+        gato.emitirSonido();
+
+        ((Gato) gato).mostrarDatosGato();
 
     }
 }

@@ -1,18 +1,18 @@
 package cl.herenciabootcamp.veterinaria.clases;
 
-public class Perro extends Animal{
+public class Gato extends Animal{
     String raza;
-    public Perro(String nombre, double peso, String raza) {
+    public Gato(String nombre, double peso,String raza) {
         super(nombre, peso);
         this.raza = raza;
     }
 
-    public void mostrarDatosDelPerro(){
+    public void mostrarDatosGato(){
         System.out.println("**************************");
         System.out.println("    Datos del animal     ");
         System.out.println("**************************");
         System.out.println("Nombre del perro: " + getNombre());
-        System.out.println("Peso del perro: " + getPeso());
+        System.out.println("Peso del perro: " + peso);
         System.out.println("Raza del perro: "+ this.raza);
     }
 
@@ -29,6 +29,6 @@ public class Perro extends Animal{
     @Override
     public void emitirSonido() {
         super.emitirSonido();
-        System.out.println("¡Guau!");
+        System.out.println("¡Miau!");
     }
 }

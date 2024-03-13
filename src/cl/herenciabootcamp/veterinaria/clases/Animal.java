@@ -23,4 +23,16 @@ public class Animal {
         System.out.println("Nombre del Animal: " + this.nombre);
         System.out.println("Peso del animal: " + getPeso());
     }
+
+    public void comer(){
+        System.out.println("El animal está comiendo");
+    }
+
+    public void dormir(){
+        System.out.println("El animal está durmiendo");
+    }
+
+    public void emitirSonido(){
+        System.out.println("El animal está  emitiendo un sonido");
+    }
 }
