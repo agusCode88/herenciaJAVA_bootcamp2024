@@ -29,7 +29,5 @@ public class Main {
         Persona persona2 = new Cliente(135245, "Soy Cliente", 35,"usuarioAPP");
         ((Cliente) persona2).mostrarDatosCliente();
 
-
-
     }
 }

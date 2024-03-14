@@ -8,7 +8,8 @@ public class MainVeterinaria {
     public static void main(String[] args) {
 
         ArrayList<Animal> pacientesVeterinaria = new ArrayList<>();
-
+        String nombreDelPerroABuscar= "Amadeus";
+        String nombrePerro;
 
         Animal pajaro = new Animal("Piolín",0.8);
        // pajaro.mostrarDatosAnimal();
@@ -37,16 +38,28 @@ public class MainVeterinaria {
 
         System.out.println("La cantidad de pacientes que tiene la veterinaria es de :" + pacientesVeterinaria.size());
 
-
         for(Animal pacienteAnimal: pacientesVeterinaria){
             //System.out.println("Nombre del paciente animal:" + pacienteAnimal.getNombre());
             if( pacienteAnimal instanceof  Perro){
                 pacienteAnimal.emitirSonido();
-
             }else{
                 pacienteAnimal.dormir();
             }
         }
 
+        for( int i=0 ; i < pacientesVeterinaria.size(); i++){
+           if( pacientesVeterinaria.get(i) instanceof Perro) {
+               if( pacientesVeterinaria.get(i).getNombre() != null ){
+                   nombrePerro = pacientesVeterinaria.get(i).getNombre();
+                   if(nombrePerro.equals(nombreDelPerroABuscar)){
+                       System.out.println("Encontré al Amadeus");
+                       System.out.println("Y está en la posición: " + i );
+                       pacientesVeterinaria.remove(pacientesVeterinaria.get(i));
+                   }
+               }
+           }
+        }
+
+        System.out.println("La cantidad de pacientes que tiene la veterinaria es de :" + pacientesVeterinaria.size());
     }
 }
