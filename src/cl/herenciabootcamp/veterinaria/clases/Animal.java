@@ -6,8 +6,12 @@ package cl.herenciabootcamp.veterinaria.clases;
  * La transformamos a clase abstracta para tener atributos
  * o métodos que serán compartidos por las subclases.
  *
- * Lo que declaro como abstracto, debe ser impllementados por las
- * subclases o los objetos que quiera instanciar de esta clase
+ * Lo que declaro como abstracto, debe ser implementados por las
+ * subclases o los objetos que quiera instanciar de esta clase.
+ *
+ *  Las clases abstractas a menudo se utilizan para definir una estructura de jerarquía
+ *  en la que algunas funcionalidades están implementadas y otras deben ser implementadas por las subclases.
+ *  Esto puede ser útil para establecer relaciones más fuertes entre las clases.
  */
 public abstract class Animal {
 
@@ -32,6 +36,9 @@ public abstract class Animal {
     /**
      * Este método devuelve el nombre del animal , lo puedo usar donde quiera
      * @return el nombre del animal que es un string.
+     *
+     * Es un método concreto de la clase y puede convivir con métodos abstractos
+     * depende de las circusntancias
      */
     public String getNombre() {
         return nombre;
