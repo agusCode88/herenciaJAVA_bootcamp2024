@@ -17,13 +17,23 @@ public class Perro extends Animal{
         super();
     }
 
+    @Override
+    public void mostrarDatosAnimal() {
+        System.out.println("***************************");
+        System.out.println("      DATOS DEL PERRO     ");
+        System.out.println("***************************");
+        System.out.println("Nombre del perro: " + getNombre());
+        System.out.println("Peso del perro: " + getPeso());
+        System.out.println("Raza del perro: " + raza);
+    }
+
     public void mostrarDatosDelPerro(){
         System.out.println("Raza del perro: " + this.raza);
     }
 
     @Override
     public void comer() {
-        super.comer();
+        System.out.println("El perro está comiendo");
     }
 
     @Override
@@ -36,4 +46,6 @@ public class Perro extends Animal{
         //super.emitirSonido();
         System.out.println("!GUAU!");
     }
+
+
 }

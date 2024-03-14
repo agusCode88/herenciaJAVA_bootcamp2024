@@ -9,8 +9,24 @@ public class MainVeterinaria {
 
         ArrayList<Animal> pacientesVeterinaria = new ArrayList<>();
 
+        /*+
+        Una clase abstracta no puede ser instanciada directamente,
+        tiene que implementar el método común que comparte con todas
+        las otras subclases.
+         */
+        Animal pajaro = new Animal("Piolín", 0.8) {
+            @Override
+            protected void mostrarDatosAnimal() {
 
-        Animal pajaro = new Animal("Piolín",0.8);
+            }
+
+            @Override
+            protected void comer() {
+
+            }
+        };
+
+
        // pajaro.mostrarDatosAnimal();
 
         //pajaro.comer();
@@ -22,6 +38,8 @@ public class MainVeterinaria {
        // perroEjemplo.mostrarDatosDelPerro();
 
         Animal perro1 = new Perro("Amadeus",20,"Quiltroberman");
+
+
         //perro1.mostrarDatosAnimal();
         //((Perro)perro1).mostrarDatosDelPerro();
 
@@ -29,7 +47,7 @@ public class MainVeterinaria {
        // perroCasting.mostrarDatosDelPerro();
         Gato gatoMascota = new Gato("Garfield",10,"Michu");
 
-        pacientesVeterinaria.add(pajaro);
+        //pacientesVeterinaria.add(pajaro);
         pacientesVeterinaria.add(perroQueEmiteGuau);
         pacientesVeterinaria.add(gatoQueEmiteMiau);
         pacientesVeterinaria.add(perro1);
@@ -41,10 +59,12 @@ public class MainVeterinaria {
         for(Animal pacienteAnimal: pacientesVeterinaria){
             //System.out.println("Nombre del paciente animal:" + pacienteAnimal.getNombre());
             if( pacienteAnimal instanceof  Perro){
-                pacienteAnimal.emitirSonido();
+                ((Perro) pacienteAnimal).mostrarDatosAnimal();
+                ((Perro) pacienteAnimal).comer();
 
-            }else{
-                pacienteAnimal.dormir();
+            }else if( pacienteAnimal instanceof Gato){
+                ((Gato) pacienteAnimal).mostrarDatosAnimal();
+                ((Gato) pacienteAnimal).comer();
             }
         }
 

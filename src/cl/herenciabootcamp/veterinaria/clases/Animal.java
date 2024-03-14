@@ -2,8 +2,14 @@ package cl.herenciabootcamp.veterinaria.clases;
 
 /**
  * Esta es la superclase de la veterinaria
+ *
+ * La transformamos a clase abstracta para tener atributos
+ * o métodos que serán compartidos por las subclases.
+ *
+ * Lo que declaro como abstracto, debe ser impllementados por las
+ * subclases o los objetos que quiera instanciar de esta clase
  */
-public class Animal {
+public abstract class Animal {
 
     protected String nombre;
     protected double peso;
@@ -35,18 +41,13 @@ public class Animal {
         return peso;
     }
 
-    public void mostrarDatosAnimal(){
-        System.out.println("***********************************");
-        System.out.println("        DATOS DEL ANIMAL            ");
-        System.out.println("***********************************");
-        System.out.println("Nombre del animal: " + this.nombre);
-        System.out.println("Peso del animal: " + this.peso);
-    }
+    /**
+     * Un método abstracto no puede tener un cuerpo,
+     * el cuerpo del método lo implementa la clase hija.
+     */
+    protected abstract void mostrarDatosAnimal();
 
-    public void comer(){
-        System.out.println("El animal está comiendo");
-
-    }
+    protected abstract void comer();
 
     public void dormir(){
         System.out.println("El animal está durmiendo");
