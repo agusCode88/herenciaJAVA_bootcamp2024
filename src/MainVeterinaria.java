@@ -26,7 +26,6 @@ public class MainVeterinaria {
             }
         };
 
-
        // pajaro.mostrarDatosAnimal();
 
         //pajaro.comer();
@@ -54,7 +53,6 @@ public class MainVeterinaria {
         pacientesVeterinaria.add(gatoMascota);
 
         System.out.println("La cantidad de pacientes que tiene la veterinaria es de :" + pacientesVeterinaria.size());
-
 
         for(Animal pacienteAnimal: pacientesVeterinaria){
             //System.out.println("Nombre del paciente animal:" + pacienteAnimal.getNombre());
