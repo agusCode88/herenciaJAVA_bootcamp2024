@@ -47,6 +47,9 @@ public class MainVeterinaria {
             }
         }
 
+        /**
+         * Recorre la lista de animales en busqueda de un perrito
+         */
         for( int i=0 ; i < pacientesVeterinaria.size(); i++){
            if( pacientesVeterinaria.get(i) instanceof Perro) {
                if( pacientesVeterinaria.get(i).getNombre() != null ){
