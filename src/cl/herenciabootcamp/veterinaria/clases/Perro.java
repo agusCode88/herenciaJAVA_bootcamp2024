@@ -13,10 +13,27 @@ public class Perro extends Animal{
         this.raza= raza;
     }
 
+    public Perro(){
+        super();
+    }
+
     public void mostrarDatosDelPerro(){
         System.out.println("Raza del perro: " + this.raza);
     }
 
+    @Override
+    public void comer() {
+        super.comer();
+    }
 
+    @Override
+    public void dormir() {
+        super.dormir();
+    }
 
+    @Override
+    public void emitirSonido() {
+        //super.emitirSonido();
+        System.out.println("!GUAU!");
+    }
 }

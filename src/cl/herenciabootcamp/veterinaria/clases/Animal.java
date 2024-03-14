@@ -19,6 +19,10 @@ public class Animal {
         this.peso = peso;
     }
 
+    public Animal(){
+
+    }
+
     /**
      * Este método devuelve el nombre del animal , lo puedo usar donde quiera
      * @return el nombre del animal que es un string.
@@ -37,6 +41,19 @@ public class Animal {
         System.out.println("***********************************");
         System.out.println("Nombre del animal: " + this.nombre);
         System.out.println("Peso del animal: " + this.peso);
+    }
+
+    public void comer(){
+        System.out.println("El animal está comiendo");
+
+    }
+
+    public void dormir(){
+        System.out.println("El animal está durmiendo");
+    }
+
+    public void emitirSonido(){
+        System.out.println("El animal está emitiendo un sonido");
     }
 
 }
